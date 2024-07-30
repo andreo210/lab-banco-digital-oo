@@ -10,5 +10,10 @@ public class ContaCorrente extends Conta {
 		System.out.println("=== Extrato Conta Corrente ===");
 		super.imprimirInfosComuns();
 	}
+
+	@Override
+	public void pedirEmprestimo(double valor) {
+		this.saldo = valor + (valor* 0.50);
+	}
 	
 }
